@@ -1,0 +1,9 @@
+
+.galleryWrap {
+    background: linear-gradient(180deg, #F4E3C6 0%, #E6D7B3 100%);
+}
+
+.image {
+    display: block;
+    width: 100%;
+}

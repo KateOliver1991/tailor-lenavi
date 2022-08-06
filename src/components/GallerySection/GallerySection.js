@@ -1,49 +1,14 @@
 import React from 'react';
-import { GalleryContainer } from './GalleryElements';
+import './style.css';
 
-import { ProGallery } from 'pro-gallery';
-import 'pro-gallery/dist/statics/main.css';
-
-import Items from './Images';
-
-export function Gallery() {
-
-  // Add your images here...
-  
-
-  // The options of the gallery (from the playground current state)
-  const options = {
-    galleryLayout: 0,
-    hoveringBehaviour: 'NEVER_SHOW',
-    scrollAnimation: 'FADE_IN',
-    imageHoverAnimation: 'ZOOM_IN',
-  };
-
-  // The size of the gallery container. The images will fit themselves in it
-  const container = {
-    width: window.innerWidth,
-    height: window.innerHeight
-  };
-
-  // The eventsListener will notify you anytime something has happened in the gallery.
-  const eventsListener = (eventName, eventData) => console.log({eventName, eventData}); 
-
-  // The scrollingElement is usually the window, if you are scrolling inside another element, suplly it here
-  const scrollingElement = window;
-
+export default function GallerySection(props) {
+  console.log(props);
   return (
+    <div style={{columns: props.columnCount, columnGap: 0}} id="gallery" className='galleryWrap'>
+      {props.photos.map((src, i) => 
+        <img src={src} key={i} className="image" alt="" style={{padding: props.gap/1}}/>
+      )}
 
-        <GalleryContainer id="gallery">
-                <ProGallery
-                        items={Items}
-                        options={options}
-                        container={container}
-                        eventsListener={eventsListener}
-                        scrollingElement={scrollingElement}
-                />
-        </GalleryContainer>
-        
-  );
+    </div>
+  )
 }
-
-export default Gallery

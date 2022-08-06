@@ -7,50 +7,111 @@ export const PriceSectionContainer = styled.div`
     background-image: url(${PriceBg});
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
     width: 100%;
-    height: 100vh;
-    min-height: 817px;
-    position: relative;
-    z-index:1;
+    height: 817px;
+   
     
-    @media screen and (max-width: 450px){
-        height: 100vh;
+    @media screen and (max-width: 1100px){
+        height: 1000px;
+    }
+
+    @media screen and (max-width: 658px){
+        height: 1500px;
     }
 `;
 
-export const PriceSectionContent = styled.div`
-    position: absolute;
-    width: 100%;
-    height:100%;
-    background: linear-gradient(152.02deg, rgba(142, 158, 167, 0.65) 20.5%, rgba(51, 58, 60, 0.65) 91.24%);
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
 
-    padding-bottom: 200px;
+export const SectionShade = styled.div`
+    width: 100%;
+    height: 100%;
+    min-height: 817px;
+    background: linear-gradient(152.02deg, rgba(142, 158, 167, 0.65) 20.5%, rgba(51, 58, 60, 0.65) 91.24%);
+    z-index: 1;
+    margin: 0;
+    padding-top: 150px;
+
+    @media screen and (max-width: 1100px){
+        height: 1200px;
+        padding-top: 0;
+    }
+
+    @media screen and (max-width: 658px){
+        height: 1500px;
+        padding-top: 150px;
+    }
+`;
+
+
+export const PriceSectionContent = styled.div`
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    grid-gap: 16px;
+
+    @media screen and (max-width: 1100px){
+        grid-template-columns: 1fr 1fr;
+        padding-top: 140px;
+
+    }
+
+    @media screen and (max-width: 768px){
+        width: 650px;
+    }
+
+    @media screen and (max-width: 658px){
+        grid-template-columns: 1fr;
+        width: 70%;
+        padding: 0 20px;
+        grid-gap: 20px;
+    }
+
+    @media screen and (max-width: 420px){
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0 20px;
+        grid-gap: 16px;
+    }
+
 
 `;
 
 export const PriceService = styled.div`
-    border-radius: 26px 26px 0px 0px;
+    border-radius: 26px 26px 26px 26px;
     background: #FFF;
     justify-content: center;
     align-items: center;
+    width: 250px;
+    height: 350px;
+
+    @media screen and (min-width: 1500px) {
+        width: 350px;
+        height:450px
+    }
 
 `;
 
 export const PriceSectionTitle = styled.div`
-    width: 300px;
-    height: 180px;
+    width: 250px;
+    height: 140px;
     display: flex;
+    margin-bottom: 20px;
     
     border-radius: 26px 26px 0px 0px;
+
+    @media screen and (min-width: 1500px) {
+        width: 350px;
+        height: 200px;
+    }
 `;
 
 export const PriceH3 = styled.h3`
@@ -58,6 +119,7 @@ export const PriceH3 = styled.h3`
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing; -0.02em;
     color: #FFF;
     height:100%;
@@ -73,16 +135,22 @@ export const PriceH3 = styled.h3`
 `;
 
 export const PriceItemWrapper = styled.div`
-    padding: 20px;
+    padding: 0 20px;
     background: #fff;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 320px;
-    border-radius: 0px 0px 26px 26px;
+    width: 250px;
+    height: 240px;
+    border-radius: 26px 26px 26px 26px;
+
+    @media screen and (min-width: 1500px) {
+        width: 350px;
+        height: 300px;
+        
+    }
     
 `;
 export const ItemList =styled.div`
@@ -90,18 +158,28 @@ export const ItemList =styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
+    text-align: left;
     width: 100%;
 `
 
 export const PriceItem = styled.li`
-    font-size: 18px;
+    font-size: 16px;
     height: 40px;
     list-style: none;
+
+    @media screen and (min-width: 1500px) {
+        font-size: 20px;
+        padding: 0 10px;
+    }
 `;
 
 export const ItemCost = styled.li`
-    font-size: 18px;
+    font-size: 16px;
     height: 40px;
     list-style: none;
+
+    @media screen and (min-width: 1500px) {
+        font-size: 20px;
+        padding: 0 10px;
+    }
 `;

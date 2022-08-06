@@ -5,6 +5,7 @@ import Repair from "./assets/repair.jpg"
 
 import { 
     PriceSectionContainer,
+    SectionShade,
     PriceSectionContent,
     PriceService,
     PriceSectionTitle,
@@ -18,17 +19,17 @@ import {
 const PriceSection = () => {
   return (
     <PriceSectionContainer id="prices">
-        <PriceSectionContent>
+        <SectionShade>
+          <PriceSectionContent>
             <PriceService>
-                <PriceSectionTitle style={{
-                    backgroundImage: `url(${Uniform})`,
-                    backgroundPosition: '0% 30%',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
+              <PriceSectionTitle style={{
+                  backgroundImage: `url(${Uniform})`,
+                  backgroundPosition: '0% 35%',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat'
                 }}>
-                    <PriceH3>Школьная форма</PriceH3>
+                  <PriceH3>Школьная форма</PriceH3>
                 </PriceSectionTitle>
-
                 <PriceItemWrapper>
                     <ItemList>
                         <PriceItem>Юбка в складку</PriceItem>
@@ -55,21 +56,18 @@ const PriceSection = () => {
                         <ItemCost>от 200 ₽</ItemCost>
                     </ItemList>
                 </PriceItemWrapper>
-                
-
             </PriceService>
 
             <PriceService>
-                <PriceSectionTitle style={{
-                    backgroundImage: `url(${Individual})`,
-                    backgroundPosition: '0% 30%',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
+              <PriceSectionTitle style={{
+                  backgroundImage: `url(${Individual})`,
+                  backgroundPosition: '0% 15%',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat'
                 }}>
-                    <PriceH3>Индивидуальный пошив</PriceH3>
-                </PriceSectionTitle>
-
-                <PriceItemWrapper>
+                  <PriceH3>Индивидуальный <br/> пошив</PriceH3>
+              </PriceSectionTitle>
+              <PriceItemWrapper>
                     <ItemList>
                         <PriceItem>Юбка </PriceItem>
                         <ItemCost>от 1000 ₽</ItemCost>
@@ -88,24 +86,21 @@ const PriceSection = () => {
                     </ItemList>
                     <ItemList>
                         <PriceItem>Вечерние платья</PriceItem>
-                        <ItemCost>по договоренности</ItemCost>
+                        <ItemCost>договорная</ItemCost>
                     </ItemList>
                 </PriceItemWrapper>
-                
-
             </PriceService>
 
             <PriceService>
-                <PriceSectionTitle style={{
-                    backgroundImage: `url(${Repair})`,
-                    backgroundPosition: '0% 30%',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
-                }}>
-                    <PriceH3>Ремонт одежды</PriceH3>
-                </PriceSectionTitle>
-
-                <PriceItemWrapper>
+              <PriceSectionTitle style={{
+                backgroundImage: `url(${Repair})`,
+                backgroundPosition: '0% 10%',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+              }}>
+                <PriceH3>Ремонт одежды</PriceH3>
+              </PriceSectionTitle>
+              <PriceItemWrapper>
                     <ItemList>
                         <PriceItem>Укоротить рукава</PriceItem>
                         <ItemCost>от 300 ₽</ItemCost>
@@ -128,11 +123,12 @@ const PriceSection = () => {
                     </ItemList>
                 
                 </PriceItemWrapper>
-                
-
+              
             </PriceService>
-        </PriceSectionContent>
-    
+
+          </PriceSectionContent>
+        </SectionShade>
+        
     </PriceSectionContainer>
   )
 }
