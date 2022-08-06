@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -16,7 +16,6 @@ import Craft from './assets/crafting.jpg'
 SwiperCore.use([Pagination, Navigation, Thumbs, EffectFade, Mousewheel]);
 
 export default function ServicesSlider () {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null)
 
   return (
     <>
