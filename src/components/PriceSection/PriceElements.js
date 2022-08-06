@@ -21,11 +21,8 @@ export const PriceSectionContainer = styled.div`
     }
 
     @media screen and (max-width: 1100px){
-        height: 1000px;
-    }
-
-    @media screen and (max-width: 1100px){
-        height: 1000px;
+        min-height: 1100px;
+        padding-top: 0;
     }
 
     @media screen and (max-width: 768px){
@@ -53,7 +50,8 @@ export const SectionShade = styled.div`
     }
 
     @media screen and (max-width: 1100px){
-        min-height: 1200px;
+        min-height: 1100px;
+        margin: 0;
         padding-top: 0;
     }
 
@@ -76,13 +74,14 @@ export const PriceSectionContent = styled.div`
     justify-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: start;
+    align-items: stretch;
+    align-content: space-evenly;
+    justify-content: center;
     grid-gap: 16px;
 
 
     @media screen and (max-width: 1100px){
         grid-template-columns: 1fr 1fr;
-        padding-top: 140px;
 
     }
 
