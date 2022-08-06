@@ -24,26 +24,19 @@ const useForm = (callback, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
-
-    const contactFormData = new FormData();
-    contactFormData.append("Имя", values.username)
-    contactFormData.append("Телефон", values.phone)
-    contactFormData.append("Комментарий", values.comment)
-
-    axios({
-      method: 'post',
-      url: 'https://v1.nocodeapi.com/katecarter1991/telegram/qDmUfmrZVyVdMuXB', 
-      params: {},
-      data: contactFormData,
-      headers: {'Content-Type': 'multipart/form-data' }
-    }).then(function (response) {
-      // handle success
-      
-      console.log(response.data);
-    }).catch(function (errors) {
-      // handle error
+    const TOKEN = "5434963078:AAGqQdqG3N3AodTllfc3j98zHQLINyK0RgU";
+    const CHAT_ID = "-657034426";
+    const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
     
-      console.log(errors);
+    let message = `<b>Заявка с сайта!</b>\n`;
+    message += `<b>Отправитель:</b> ${ values.username }\n`;
+    message += `<b>Телефон:</b> ${ values.phone }\n`;
+    message += `<b>Комментарий:</b> ${ values.comment }\n`;
+
+    axios.post(URL_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message
     })
 
   };
