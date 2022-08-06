@@ -4,8 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade"
-import SwiperCore, { Pagination, Navigation, Thumbs, EffectFade, Mousewheel } from "swiper";
+import "swiper/css/effect-fade";
+import "swiper/css/autoplay";
+import SwiperCore, { Pagination, Navigation, Thumbs, EffectFade, Mousewheel, Autoplay } from "swiper";
 import { SlideTextWrapper, SlideH2, SlideHr, SlideP } from "./SliderElements";
 import School from './assets/school.jpg';
 import Individual from './assets/individual.jpg';
@@ -13,7 +14,7 @@ import Festival from './assets/carnival.jpg';
 import Fitting from './assets/fitting.jpg';
 import Craft from './assets/crafting.jpg'
 
-SwiperCore.use([Pagination, Navigation, Thumbs, EffectFade, Mousewheel]);
+SwiperCore.use([Pagination, Navigation, Thumbs, EffectFade, Mousewheel, Autoplay]);
 
 export default function ServicesSlider () {
 
@@ -26,6 +27,7 @@ export default function ServicesSlider () {
         pagination={{
           clickable: true,
         }}
+        autoplay={{delay: 5000}}
         mousewheel={true}
         modules={[Pagination, EffectFade]}
         className="mySwiper"

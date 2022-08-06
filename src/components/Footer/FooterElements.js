@@ -4,6 +4,7 @@ export const FooterSection = styled.div`
     background-color: transparent;
     background: linear-gradient(269.73deg, rgba(93, 92, 97, 0.68) 54.78%, rgba(176, 162, 149, 0.68) 99.8%);
     height: 100px;
+    margin-top: -100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,6 +24,7 @@ export const FooterSection = styled.div`
     @media screen and (max-width: 550px){
         height: 140px;
         padding: 10px;
+        margin-top: -140px;
     }
 
 `;

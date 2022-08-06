@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
-import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 export const SidebarContainer = styled.aside`
@@ -80,8 +79,7 @@ export const SideBtnWrap = styled.div`
     margin-top: 40px;
 `;
 
-export const SidebarRoute = styled(LinkR)`
-    border-radius: 50px;
+export const SidebarRoute = styled(LinkS)`
     background: rgba(115, 149, 174, 0.5);
     white-space: nowrap;
     padding: 16px 32px;

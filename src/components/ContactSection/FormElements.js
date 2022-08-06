@@ -11,8 +11,12 @@ export const ContactContainer = styled.div`
     top: 0;
     position:relative;
     
-    @media screen and (max-width: 450px){
+    @media screen and (max-width: 550px){
         min-height: 1000px;
+    }
+
+    @media screen and (max-width: 480px){
+        min-height: 1100px;
     }
     
 `;
@@ -37,11 +41,11 @@ export const ContactLeftSide = styled.div`
     height:100%;
     overflow: hidden;
 
-    @media screen and (max-width: 950px){
+    @media screen and (max-width: 880px){
         width: 30%;
     }
 
-    @media screen and (max-width: 680px){
+    @media screen and (max-width: 880px){
         display: none;
     }
 `;
@@ -65,12 +69,24 @@ export const ContactRightSide = styled.div`
     float: right;
     margin-left: 40%;
 
-    @media screen and (max-width: 950px){
-        width:70%;
-        margin-left: 30%;
+    @media screen and (max-width: 880px){
+        width:100%;
+        margin-left:0;
     }
+    
+`;
 
-    @media screen and (max-width: 680px){
+export const ContactRightSideS = styled.div`
+    width: 60%;
+    height:100%;
+    background-image:url(${Map}); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+    margin-left: 40%;
+
+    @media screen and (max-width: 880px){
         width:100%;
         margin-left:0;
     }
@@ -88,8 +104,20 @@ export const RightSideShade = styled.div`
     justify-content: center;
 `;
 
+export const RightSideShadeSuccess = styled.div`
+    width: 100%;
+    height:100%;
+    background: linear-gradient(152.02deg, rgba(142, 158, 167, 0.65) 20.5%, rgba(51, 58, 60, 0.65) 91.24%);
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+`;
+
+
 export const Righth1 = styled.h1`
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     text-align: start;
     width: 60%;
     margin-bottom: 1rem;
@@ -99,13 +127,12 @@ export const Righth1 = styled.h1`
 
     @media screen and (max-width: 1300px){
         width: 70%;
-        font-size: 1.4rem;
 
     }
 
     @media screen and (max-width: 480px){
-        font-size: 1.4rem;
-        width: 85%;
+        font-size: 1.6rem;
+        width: 90%;
 
     }
 `;
@@ -133,8 +160,8 @@ export const FormDetails = styled.form`
     padding: 40px;
 
     @media screen and (max-width: 1300px){
-        width: 50%;
-        height: 70%;
+        width: 60%;
+        height: 60%;
     }
 
     @media screen and (max-width: 950px){
@@ -142,9 +169,9 @@ export const FormDetails = styled.form`
         height: 60%;
     }
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 550px){
         width: 90%;
-        height: 90%;
+        height: 55%;
     }
 `;
 
@@ -216,15 +243,21 @@ export const ImgSuccess = styled.img`
 
 
 export const ImgContainer = styled.div`
-    display: flex;
-    align-items: center;
-    width: 80%;
-    bottom: 0;
-
+    display: inline-block;
+    width: 90%;
+    margin-top: 150px;
+    margin-bottom: 96px;
+    
+    @media screen and (max-width: 550px) {
+        margin-bottom: 136px;
+        
+    }
 
     ${ImgSuccess}{
         width: 100%;
-        object-fit: cover;
+        object-position: left bottom;
     }
+
+   
 `;
 

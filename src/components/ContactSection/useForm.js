@@ -32,12 +32,17 @@ const useForm = (callback, validate) => {
     message += `<b>Отправитель:</b> ${ values.username }\n`;
     message += `<b>Телефон:</b> ${ values.phone }\n`;
     message += `<b>Комментарий:</b> ${ values.comment }\n`;
-
+ 
     axios.post(URL_API, {
       chat_id: CHAT_ID,
       parse_mode: 'html',
-      text: message
+      text: message,
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
     })
+    
+    
 
   };
 

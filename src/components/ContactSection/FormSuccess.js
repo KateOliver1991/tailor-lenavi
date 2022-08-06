@@ -1,22 +1,22 @@
 import React from 'react'
 import { 
-    ContactRightSide, 
+    ContactRightSideS, 
     Righth1, 
-    RightSideShade, 
+    RightSideShadeSuccess, 
     ImgSuccess,
     ImgContainer 
 } from './FormElements'
 
 const FormSuccess = () => {
   return (
-    <ContactRightSide>
-        <RightSideShade>
+    <ContactRightSideS>
+        <RightSideShadeSuccess>
             <Righth1>Мы получили Вашу заявку. <br/> Мастер скоро свяжется с Вами.</Righth1>
             <ImgContainer>
                 <ImgSuccess src={require('./assets/success.png')}/>
             </ImgContainer>
-        </RightSideShade>
-    </ContactRightSide>
+        </RightSideShadeSuccess>
+    </ContactRightSideS>
   )
 }
 

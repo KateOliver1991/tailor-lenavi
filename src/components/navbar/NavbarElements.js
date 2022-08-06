@@ -134,7 +134,7 @@ export const NavBtn = styled.nav`
     }
 `;
 
-export const NavBtnLink = styled(LinkR)`
+export const NavBtnLink = styled(LinkS)`
     border-radius: 0px;
     background: rgba(115, 149, 174, 0.5);
     white-space: nowrap;
