@@ -6,7 +6,7 @@ export const FooterSection = styled.div`
     height: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     align-items: flex-end;
     font-size: 1rem;
     padding: 10px;
@@ -21,12 +21,19 @@ export const FooterSection = styled.div`
     }
 
     @media screen and (max-width: 550px){
-        height: 80px;
+        height: 140px;
+        padding: 10px;
     }
 
 `;
 
 export const FooterP = styled.p`
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #fff;
+    text-align:right;
+
+    @media screen and (max-width: 550px){
+        font-size: 1rem;
+    }
+
 `;

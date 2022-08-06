@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
+import { HideOn } from 'react-hide-on-scroll';
 import {
     Nav, 
     NavContainer, 
@@ -19,9 +20,12 @@ const Navbar = ({toggle}) => {
     <>
     <Nav>
         <NavContainer>
-            <NavLogo to= "/">
-                <NavImg src={require('./assets/LogoMini.png')} alt='Company logo'/>
-             </NavLogo>
+            <HideOn inverse height={700}>
+                <NavLogo to= "/">
+                    <NavImg src={require('./assets/LogoMini.png')} alt='Company logo'/>
+                </NavLogo>
+            </HideOn>
+            
             <MobileIcon onClick={toggle}>
                 <FaBars />
             </MobileIcon>
@@ -44,9 +48,12 @@ const Navbar = ({toggle}) => {
                 <NavItem>
                     <NavLinks to ="contacts">Контакты</NavLinks>
                 </NavItem>
+                <HideOn inverse height={700}>
                     <NavBtn>
                         <NavBtnLink to="contacts">Записаться</NavBtnLink>
-                    </NavBtn>    
+                    </NavBtn> 
+                </HideOn>
+                       
             </NavMenu>
         </NavContainer>
     </Nav>

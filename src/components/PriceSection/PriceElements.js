@@ -16,9 +16,21 @@ export const PriceSectionContainer = styled.div`
     width: 100%;
     height: 817px;
    
-    
+    @media screen and (min-width: 1920px){
+        height: 1080px;
+    }
+
     @media screen and (max-width: 1100px){
         height: 1000px;
+    }
+
+    @media screen and (max-width: 1100px){
+        height: 1000px;
+    }
+
+    @media screen and (max-width: 768px){
+        min-height: 1300px;
+       
     }
 
     @media screen and (max-width: 658px){
@@ -29,27 +41,36 @@ export const PriceSectionContainer = styled.div`
 
 export const SectionShade = styled.div`
     width: 100%;
-    height: 100%;
     min-height: 817px;
     background: linear-gradient(152.02deg, rgba(142, 158, 167, 0.65) 20.5%, rgba(51, 58, 60, 0.65) 91.24%);
     z-index: 1;
-    margin: 0;
+    margin: 50px 0;
     padding-top: 150px;
 
+    @media screen and (min-width: 1920px){
+        min-height: 1080px;
+        padding-top: 300px;
+    }
+
     @media screen and (max-width: 1100px){
-        height: 1200px;
+        min-height: 1200px;
         padding-top: 0;
     }
 
+    @media screen and (max-width: 768px){
+        min-height: 1300px;
+        padding-top: 150px;
+    }
+
     @media screen and (max-width: 658px){
-        height: 1500px;
+        min-height: 1500px;
         padding-top: 150px;
     }
 `;
 
 
 export const PriceSectionContent = styled.div`
-    width: 80%;
+    width: 90%;
     height: 100%;
     margin: 0 auto;
     justify-items: center;
@@ -57,6 +78,7 @@ export const PriceSectionContent = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
     grid-gap: 16px;
+
 
     @media screen and (max-width: 1100px){
         grid-template-columns: 1fr 1fr;
@@ -93,10 +115,17 @@ export const PriceService = styled.div`
     width: 250px;
     height: 350px;
 
-    @media screen and (min-width: 1500px) {
-        width: 350px;
-        height:450px
+    @media screen and (min-width: 1920px) {
+        width: 450px;
+        height: 550px;
     }
+
+    @media screen and (min-width: 1400px) {
+        width: 350px;
+        height:450px;
+    }
+
+    
 
 `;
 
@@ -108,7 +137,12 @@ export const PriceSectionTitle = styled.div`
     
     border-radius: 26px 26px 0px 0px;
 
-    @media screen and (min-width: 1500px) {
+    @media screen and (min-width: 1920px) {
+        width: 450px;
+        height: 200px;
+    }
+
+    @media screen and (min-width: 1400px) {
         width: 350px;
         height: 200px;
     }
@@ -116,7 +150,7 @@ export const PriceSectionTitle = styled.div`
 
 export const PriceH3 = styled.h3`
     font-family: 'Oswald', sans-serif;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
@@ -146,7 +180,12 @@ export const PriceItemWrapper = styled.div`
     height: 240px;
     border-radius: 26px 26px 26px 26px;
 
-    @media screen and (min-width: 1500px) {
+    @media screen and (min-width: 1920px) {
+        width: 450px;
+        height: 350px;
+    }
+
+    @media screen and (min-width: 1400px) {
         width: 350px;
         height: 300px;
         
@@ -163,23 +202,23 @@ export const ItemList =styled.div`
 `
 
 export const PriceItem = styled.li`
-    font-size: 16px;
+    font-size: 1rem;
     height: 40px;
     list-style: none;
 
-    @media screen and (min-width: 1500px) {
-        font-size: 20px;
+    @media screen and (min-width: 1400px) {
+        font-size: 1.3rem;
         padding: 0 10px;
     }
 `;
 
 export const ItemCost = styled.li`
-    font-size: 16px;
+    font-size: 1rem;
     height: 40px;
     list-style: none;
 
-    @media screen and (min-width: 1500px) {
-        font-size: 20px;
+    @media screen and (min-width: 1400px) {
+        font-size: 1.3rem;
         padding: 0 10px;
     }
 `;

@@ -19,7 +19,7 @@ const useForm = (callback, validate) => {
     });
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     setErrors(validate(values));
@@ -30,19 +30,20 @@ const useForm = (callback, validate) => {
     contactFormData.append("Телефон", values.phone)
     contactFormData.append("Комментарий", values.comment)
 
-    const axios = require('axios');
-
     axios({
       method: 'post',
       url: 'https://v1.nocodeapi.com/katecarter1991/telegram/qDmUfmrZVyVdMuXB', 
       params: {},
-      data: contactFormData
+      data: contactFormData,
+      headers: {'Content-Type': 'multipart/form-data' }
     }).then(function (response) {
       // handle success
+      
       console.log(response.data);
-    }).catch(function (error) {
+    }).catch(function (errors) {
       // handle error
-      console.log(error);
+    
+      console.log(errors);
     })
 
   };
@@ -53,7 +54,7 @@ const useForm = (callback, validate) => {
         callback();
       }
     },
-    [errors]
+    [callback, isSubmitting, errors]
   );
   
   return { handleChange, handleSubmit, values, errors };

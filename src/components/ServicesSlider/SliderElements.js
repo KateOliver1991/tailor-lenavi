@@ -28,11 +28,11 @@ export const SlideTextWrapper = styled.div`
         margin-top: 25%;
     }
 
-    @media screen and (max-width: 420px) {
-        width: 80%;
-        margin-left: 10%;
+    @media screen and (max-width: 520px) {
+        width: 90%;
+        margin-left: 5%;
         padding: 14px 14px;
-        margin-top: 45%
+        margin-top: 40%
     }
 
     
@@ -47,8 +47,8 @@ export const SlideH2 = styled.h2`
     max-width: 300px;
 
     @media screen and (max-width: 680px){
-        font-size: 26px;
-        line-height: 30px;
+        font-size: 1.8rem;
+        
     }
 `;
 
@@ -70,7 +70,7 @@ export const SlideP = styled.p`
     max-width: 400px;
 
     @media screen and (max-width: 480px){
-        font-size: 18px;
+        font-size: 1.4rem;
         line-height: 24px;
     }
 `;

@@ -12,7 +12,7 @@ export const ContactContainer = styled.div`
     position:relative;
     
     @media screen and (max-width: 450px){
-        height: 100vh;
+        min-height: 1000px;
     }
     
 `;
@@ -37,7 +37,11 @@ export const ContactLeftSide = styled.div`
     height:100%;
     overflow: hidden;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 950px){
+        width: 30%;
+    }
+
+    @media screen and (max-width: 680px){
         display: none;
     }
 `;
@@ -61,7 +65,12 @@ export const ContactRightSide = styled.div`
     float: right;
     margin-left: 40%;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 950px){
+        width:70%;
+        margin-left: 30%;
+    }
+
+    @media screen and (max-width: 680px){
         width:100%;
         margin-left:0;
     }
@@ -126,6 +135,11 @@ export const FormDetails = styled.form`
     @media screen and (max-width: 1300px){
         width: 50%;
         height: 70%;
+    }
+
+    @media screen and (max-width: 950px){
+        width: 70%;
+        height: 60%;
     }
 
     @media screen and (max-width: 480px){

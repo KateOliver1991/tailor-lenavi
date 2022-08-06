@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             <SidebarMenu>
                 <SidebarLink to ='main' onClick={ toggle }>Главная</SidebarLink>
                 <SidebarLink to ='services' onClick={ toggle }>Услуги</SidebarLink>
-                <SidebarLink to ='galery' onClick={ toggle }>Галерея</SidebarLink>
+                <SidebarLink to ='gallery' onClick={ toggle }>Галерея</SidebarLink>
                 <SidebarLink to ='prices' onClick={ toggle }>Цены</SidebarLink>
                 <SidebarLink to ='feedback' onClick={ toggle }>Отзывы</SidebarLink>
                 <SidebarLink to ='contacts' onClick={ toggle }>Контакты</SidebarLink>
