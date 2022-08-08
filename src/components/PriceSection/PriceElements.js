@@ -17,18 +17,15 @@ export const PriceSectionContainer = styled.div`
     height: 817px;
    
     @media screen and (min-width: 1920px){
-        height: 1080px;
-    }
-
-    @media screen and (max-width: 1100px){
-        min-height: 1100px;
+        height: 900px;
         padding-top: 0;
     }
 
-    @media screen and (max-width: 768px){
-        min-height: 1300px;
-       
+    @media screen and (max-width: 1100px){
+        height: 1100px;
+        padding-top: 0;
     }
+
 
     @media screen and (max-width: 658px){
         height: 1500px;
@@ -42,21 +39,22 @@ export const SectionShade = styled.div`
     background: linear-gradient(152.02deg, rgba(142, 158, 167, 0.65) 20.5%, rgba(51, 58, 60, 0.65) 91.24%);
     z-index: 1;
     margin: 50px 0;
-    padding-top: 150px;
+    padding: 150px 0;
 
     @media screen and (min-width: 1920px){
-        min-height: 1080px;
-        padding-top: 300px;
+        min-height: 900px;
+        padding-top: 0;
+
     }
 
     @media screen and (max-width: 1100px){
         min-height: 1100px;
         margin: 0;
-        padding-top: 0;
+        padding: 0;
     }
 
     @media screen and (max-width: 768px){
-        min-height: 1300px;
+        min-height: 1100px;
         padding-top: 150px;
     }
 
@@ -87,6 +85,7 @@ export const PriceSectionContent = styled.div`
 
     @media screen and (max-width: 768px){
         width: 650px;
+        height: 95%;
     }
 
     @media screen and (max-width: 658px){
